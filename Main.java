@@ -33,14 +33,14 @@ public class Main {
             if (scanner.hasNextInt()) {
                 idade = scanner.nextInt();
                 scanner.nextLine();
-                if (idade < 0) {
-                    System.out.println("Por favor digite uma idade");
+                if (idade < 0 || idade > 120) {
+                    System.out.println("Por favor, digite uma idade valida");
                 }
             }else {
-                System.out.println("Por favor, digite uma idade valida");
+                System.out.println("Por favor, digite sua idade");
                 scanner.nextLine(); 
             }
-        } while (idade <0); {
+        } while (idade <0 || idade > 120); {
         return idade;
         }
     }
